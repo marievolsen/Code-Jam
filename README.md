@@ -1,7 +1,7 @@
 # Code-Jam
 This is group 205's Code-Jam submission
 
-The participating members of the Code-Jam are:
+## The participating members of the Code-Jam are:
 
 Marie Vestergaard Olsen
 
@@ -15,7 +15,7 @@ Nicolai Engelbrecht Svendsen
 
 
 
-In the github repository we have:
+## In the github repository we have:
 
 Unity project
 
