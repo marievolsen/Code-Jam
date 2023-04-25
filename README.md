@@ -14,6 +14,9 @@ Victor Amtoft Hejø
 Nicolai Engelbrecht Svendsen
 
 In the github repository we have:
+
 Unity project
+
 UML diagrams (Use case, Class and Sequence diagrams) - In document labelled "UML"
+
 Suggestions for improvements from all participating members - In document labelled "Suggestions"
