@@ -2,10 +2,15 @@
 This is group 205's Code-Jam submission
 
 The participating members of the Code-Jam are:
+
 Marie Vestergaard Olsen
+
 Adelina Gabriella Maniche Holmstrøm
+
 Malthe Otto Boelhøj Hartvigsen
+
 Victor Amtoft Hejø
+
 Nicolai Engelbrecht Svendsen
 
 In the github repository we have:
