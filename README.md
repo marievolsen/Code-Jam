@@ -13,6 +13,8 @@ Victor Amtoft Hejø
 
 Nicolai Engelbrecht Svendsen
 
+Halfdan Teemu Ruuhi Abrahamsen (?)
+
 
 
 ## In the github repository we have:
