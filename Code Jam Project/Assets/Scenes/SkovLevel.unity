@@ -322,7 +322,6 @@ GameObject:
   - component: {fileID: 66122646}
   - component: {fileID: 66122645}
   - component: {fileID: 66122650}
-  - component: {fileID: 66122649}
   - component: {fileID: 66122652}
   - component: {fileID: 66122651}
   m_Layer: 0
@@ -410,19 +409,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &66122649
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66122644}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &66122650
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -451,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeae2882d44fd70479cbd286421ec57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0.28, y: 3.73, z: 4.47}
   speed: 3.3
   controller: {fileID: 66122652}
 --- !u!143 &66122652
