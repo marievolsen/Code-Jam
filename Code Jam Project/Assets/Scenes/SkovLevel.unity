@@ -448,9 +448,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 66122644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36578f21a7ff06340a1cf6568177f93d, type: 3}
+  m_Script: {fileID: 11500000, guid: aeae2882d44fd70479cbd286421ec57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {x: 0, y: 0, z: 0}
   speed: 3.3
   controller: {fileID: 66122652}
 --- !u!143 &66122652
