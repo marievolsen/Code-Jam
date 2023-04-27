@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SkovLevel.unity
     guid: b080b2f4b22623e45a993d2ac7352c01
   - enabled: 1
+    path: Assets/Scenes/BridgeLevel.unity
+    guid: e91e39e228dcf114e87d6cdb4e3bc1f2
+  - enabled: 1
     path: Assets/Scenes/Highway.unity
     guid: e0335885cb39c6e44bed538072e7661f
   - enabled: 1
