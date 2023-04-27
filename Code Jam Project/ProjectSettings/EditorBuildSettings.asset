@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SkovLevel.unity
     guid: b080b2f4b22623e45a993d2ac7352c01
+  - enabled: 1
+    path: Assets/Scenes/Riget.unity
+    guid: f6ba341b01e4d2a40aace3d39a47c7bc
   m_configObjects: {}
