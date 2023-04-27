@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 4dc19414e24a62d44b51129e3a4b2011
   - enabled: 1
+    path: Assets/Scenes/Hjemme.unity
+    guid: dbae93b180cfc43bba64dff0f26b81d6
+  - enabled: 1
     path: Assets/Scenes/SkovLevel.unity
     guid: b080b2f4b22623e45a993d2ac7352c01
+  - enabled: 1
+    path: Assets/Scenes/Highway.unity
+    guid: e0335885cb39c6e44bed538072e7661f
   - enabled: 1
     path: Assets/Scenes/Riget.unity
     guid: f6ba341b01e4d2a40aace3d39a47c7bc
