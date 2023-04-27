@@ -12,15 +12,15 @@ public class CollectibleControls : MonoBehaviour
     {
         if (gameObject.tag == "Checkpoint")
         {
-            player.GetComponent<PlayerController>().SetSpawnPosition(transform.position);
+            player.GetComponent<AccelerometerController>().SetSpawnPosition(transform.position);
             Destroy(gameObject);
-            PlayerController.checkpointCount++;
+            AccelerometerController.checkpointCount++;
         }
 
         if (gameObject.tag == "Collectible")
         {
             Destroy(gameObject);
-            PlayerController.collectibleCount++;
+            AccelerometerController.collectibleCount++;
         }
 
         if (gameObject.tag == "Opponent")
