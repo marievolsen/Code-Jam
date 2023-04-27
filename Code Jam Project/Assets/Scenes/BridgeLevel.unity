@@ -1564,7 +1564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 858164061}
-  nextLevelIndex: 5
+  nextLevelIndex: 4
   _clip: {fileID: 0}
 --- !u!65 &1062982993
 BoxCollider:
