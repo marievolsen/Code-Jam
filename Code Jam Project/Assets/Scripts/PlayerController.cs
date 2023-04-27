@@ -6,12 +6,6 @@ public class PlayerController : MonoBehaviour
     //Based on https://www.youtube.com/watch?v=jvwX5WthM2o. Copied from https://paste.myst.rs/j7rol335.
     //Based on "BoxScript" and "Respawn", made by Victor Hejø during HTX at ZBC Ringsted.
 
-    //Spawning
-    public static Vector3 spawnposition;
-    [SerializeField] private Vector3 startPosition;
-    public static int checkpointCount;
-    public static int collectibleCount;
-
     //Movement
     [SerializeField] float speed = 3.3f;
     //private float rotspeed = 90f;
@@ -44,12 +38,6 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Start()
     {
-        if (checkpointCount == 0)
-        {
-            spawnposition = startPosition;
-        }
-        transform.position = spawnposition;
-
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         _initialYAngle = transform.eulerAngles.y;
@@ -87,11 +75,5 @@ public class PlayerController : MonoBehaviour
     {
         enabled = true;
         StartCoroutine(CalibrateYAngle());
-    }
-
-    //Based on "BoxScript" and "Respawn", made by Victor Hejø during HTX at ZBC Ringsted.
-    public void SetSpawnPosition(Vector3 position)
-    {
-        spawnposition = position;
     }
 }

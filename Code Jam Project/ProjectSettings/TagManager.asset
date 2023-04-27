@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Opponent
+  - Collectible
+  - NextLevel
   layers:
   - Default
   - TransparentFX
