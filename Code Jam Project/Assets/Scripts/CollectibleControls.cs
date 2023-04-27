@@ -8,6 +8,7 @@ public class CollectibleControls : MonoBehaviour
     //Based on "BoxScript" and "Respawn", made by Victor Hejø during HTX at ZBC Ringsted.
     [SerializeField] private GameObject player;
     [SerializeField] private int nextLevelIndex;
+    public AudioClip _clip;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -22,6 +23,7 @@ public class CollectibleControls : MonoBehaviour
         {
             Destroy(gameObject);
             AccelerometerController.collectibleCount++;
+            SoundManager.Instance.PlaySound(_clip);
         }
 
         if (gameObject.tag == "Opponent")
@@ -33,5 +35,7 @@ public class CollectibleControls : MonoBehaviour
         {
             SceneManager.LoadScene(nextLevelIndex);
         }
+
+
     }
 }
