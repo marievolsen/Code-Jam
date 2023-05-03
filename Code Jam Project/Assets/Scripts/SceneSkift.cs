@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneSkift : MonoBehaviour
 {
-   
-  public void LoadScene()
+    [SerializeField] private int newLevel;
+    
+    public void LoadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(newLevel);
     }
 
 }

@@ -5,20 +5,20 @@ using UnityEngine;
 public class AccelerometerController : MonoBehaviour
 {
     //Based on "BoxScript" and "Respawn", made by Victor Hejø during HTX at ZBC Ringsted.
-    //Based on https://www.youtube.com/watch?v=fsEkZLBeTJ8
+    //Based on the comment section of https://www.youtube.com/watch?v=fsEkZLBeTJ8
 
     [SerializeField] private float speed;
     private Rigidbody rb;
     [SerializeField] private int yValue;
     public static Vector3 spawnposition;
     [SerializeField] private Vector3 startPosition;
-    public static int checkpointCount;
+    public bool checkpoint;
     public static int collectibleCount;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        if (checkpointCount == 0)
+        if (checkpoint)
         {
             spawnposition = startPosition;
         }

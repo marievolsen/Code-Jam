@@ -16,13 +16,15 @@ public class CollectibleControls : MonoBehaviour
         {
             player.GetComponent<AccelerometerController>().SetSpawnPosition(transform.position);
             Destroy(gameObject);
-            AccelerometerController.checkpointCount++;
+            player.GetComponent<AccelerometerController>().checkpoint = true;
         }
 
         if (gameObject.tag == "Collectible")
         {
             Destroy(gameObject);
             AccelerometerController.collectibleCount++;
+
+            //Based on https://www.youtube.com/watch?v=tEsuLTpz_DU
             SoundManager.Instance.PlaySound(_clip);
         }
 

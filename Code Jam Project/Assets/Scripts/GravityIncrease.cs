@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GravityIncrease : MonoBehaviour
 {
+    [SerializeField] Vector3 newGravity;
+
     private void Start()
     {
-        Physics.gravity = new Vector3(0, -80, 0);
+        Physics.gravity = newGravity;
     }
 }
