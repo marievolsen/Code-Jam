@@ -14,26 +14,26 @@ public class CollectibleControls : MonoBehaviour
     {
         if (gameObject.tag == "Checkpoint")
         {
-            player.GetComponent<AccelerometerController>().SetSpawnPosition(transform.position);
-            Destroy(gameObject);
-            AccelerometerController.checkpointCount++;
+            player.GetComponent<AccelerometerController>().SetSpawnPosition(transform.position); //If colliding with Checkpoint tag, sets playes spawn position to position of said checkpoint
+            Destroy(gameObject); //Detroys object when colliding
+            AccelerometerController.checkpointCount++; //Adds one count to checkpoint count
         }
 
         if (gameObject.tag == "Collectible")
         {
-            Destroy(gameObject);
-            AccelerometerController.collectibleCount++;
-            SoundManager.Instance.PlaySound(_clip);
+            Destroy(gameObject); //If colliding with tag Collectible, detroys gameobject
+            AccelerometerController.collectibleCount++; //Adds one count to collectible count
+            SoundManager.Instance.PlaySound(_clip); //Plays collectible sound clip
         }
 
         if (gameObject.tag == "Opponent")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //If colliding with opponent tag, restarts scene
         }
 
         if(gameObject.tag == "NextLevel")
         {
-            SceneManager.LoadScene(nextLevelIndex);
+            SceneManager.LoadScene(nextLevelIndex); //If colliding with NextLevel tag, plays next level build index
         }
 
 
