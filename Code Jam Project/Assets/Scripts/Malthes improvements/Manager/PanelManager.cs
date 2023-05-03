@@ -15,6 +15,8 @@ public class PanelManager : Singleton<PanelManager>
     // A list that holds the PanelInstanceModels 
     private List<PanelInstanceModel> _listInstance = new List<PanelInstanceModel>();
 
+    private int listDecrease = 1;
+    private int panelMinimum = 0;
 
     // The ShowPanel function is a public method that returns nothing, and has the parameters of a string called panelId.
     public void ShowPanel(string panelId)
@@ -49,7 +51,7 @@ public class PanelManager : Singleton<PanelManager>
     {
         if(AnyPanelShowing())
         {
-            var lastPanel = _listInstance[_listInstance.Count -1];
+            var lastPanel = _listInstance[_listInstance.Count - listDecrease];
 
             _listInstance.Remove(lastPanel);
 
@@ -60,7 +62,7 @@ public class PanelManager : Singleton<PanelManager>
     // Gets the amount of panels in the queue that is over 0.
     public bool AnyPanelShowing()
     {
-        return GetAmountPanelsInQueue() > 0;
+        return GetAmountPanelsInQueue() > panelMinimum;
     }
 
     // Returns the number of instances in the list
