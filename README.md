@@ -18,6 +18,7 @@ Halfdan Teemu Ruuhi Abrahamsen (?)
 
 
 ## In the github repository we have:
+A build of the project (as an apk file) is linked to in the document "Build.txt" in the folder "Build".
 
 Unity project
 
