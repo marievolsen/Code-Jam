@@ -7,6 +7,7 @@ TagManager:
   - Opponent
   - Collectible
   - NextLevel
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MovingPlatformControls : MonoBehaviour {
+public class MovingPlatformControls : MonoBehaviour
+{
+	//Based on "MovingPlatformControls" made by Victor Hejø during HTX at ZBC Ringsted.
 
 	public GameObject startPos;
 	public GameObject endPos;

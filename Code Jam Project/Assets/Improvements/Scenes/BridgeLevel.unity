@@ -280,7 +280,7 @@ PrefabInstance:
     - target: {fileID: 989619587547433566, guid: 60885dd37fc2ce54fac7bc28f671e32b, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: fae4115614eaa464cad49e879079dc5a, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 989619587547433566, guid: 60885dd37fc2ce54fac7bc28f671e32b, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -1485,7 +1485,7 @@ Transform:
   - {fileID: 1053713959}
   - {fileID: 938648677}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1534210922
 PrefabInstance:
@@ -1803,7 +1803,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9132537852419779914, guid: cdfc985e951c9ba4896fb25298c6619c, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9132537852419779914, guid: cdfc985e951c9ba4896fb25298c6619c, type: 3}
       propertyPath: m_LocalPosition.x
