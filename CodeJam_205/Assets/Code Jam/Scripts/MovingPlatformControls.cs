@@ -16,12 +16,16 @@ public class MovingPlatformControls : MonoBehaviour
 		if (goForEnd)
 		{
 			transform.Translate ((endPos.transform.position-transform.position).normalized * speed * Time.deltaTime);
-			if(Vector3.Distance(transform.position, endPos.transform.position) <= proximity){
+			if(Vector3.Distance(transform.position, endPos.transform.position) <= proximity)
+			{
 				goForEnd = false;
 			}
-		}else {
+		}
+		else
+		{
 			transform.Translate ((startPos.transform.position-transform.position).normalized * speed * Time.deltaTime);
-			if(Vector3.Distance(transform.position, startPos.transform.position) <= proximity){
+			if(Vector3.Distance(transform.position, startPos.transform.position) <= proximity)
+			{
 				goForEnd = true;
 			}
 		}
