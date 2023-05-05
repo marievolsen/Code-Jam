@@ -9,7 +9,6 @@ using UnityEngine.InputSystem;
 public class AccelerometerController : MonoBehaviour
 {
     //Based on "BoxScript" and "Respawn", made by Victor Hejø during HTX at ZBC Ringsted.
-    //Based on https://www.youtube.com/watch?v=fsEkZLBeTJ8
     //Based on https://github.com/Kuurde/Roll-a-Ball / https://learn.unity.com/project/roll-a-ball
 
     [SerializeField] private float speed; // A variable to set the speed of the player
