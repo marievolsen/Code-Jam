@@ -9,7 +9,7 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager control;
+    public static ScoreManager Instance;
 
     public TMP_Text scoreText;
     public TMP_Text highscoreText;
@@ -19,13 +19,13 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        if (control != null && control != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
             return;
         }
 
-        control = this;
+        Instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
 

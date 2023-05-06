@@ -24,7 +24,7 @@ public class CollectibleControls : MonoBehaviour
             Destroy(gameObject); //If colliding with tag Collectible, detroys gameobject
             AccelerometerController.collectibleCount++; //Adds one count to collectible count
             //SoundManager.Instance.PlaySound(_clip); //Plays collectible sound clip
-            ScoreManager.control.AddPoint();
+            ScoreManager.Instance.AddPoint();
         }
 
         if (gameObject.tag == "Opponent")
