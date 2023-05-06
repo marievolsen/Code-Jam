@@ -16,23 +16,19 @@ public class ScoreManager : MonoBehaviour
 
     int score = 0;
     int highscore = 0;
-   
-    private void Awake ()
+
+    private void Awake()
     {
-        control = this;
-
-        if (control == null)
-        {
-            control = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-       
-
-        else if (control != this)
+        if (control != null && control != this)
         {
             Destroy(this.gameObject);
+            return;
         }
+
+        control = this;
+        DontDestroyOnLoad(this.gameObject);
     }
+
     void Start()
     {
         highscore = PlayerPrefs.GetInt("highscore");

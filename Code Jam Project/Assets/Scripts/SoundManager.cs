@@ -10,22 +10,7 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] private AudioSource _musicSource, _effectsSource;
 
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(this.gameObject);
-
-        if (!_musicSource) _musicSource = GetComponent<AudioSource>();
-
-        PlayClip(_musicSource.clip);
-
-    }
+    
 
     public void PlayClip(AudioClip clip)
 
