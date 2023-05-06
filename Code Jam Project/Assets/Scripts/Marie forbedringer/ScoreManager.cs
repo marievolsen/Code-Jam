@@ -38,7 +38,7 @@ public class ScoreManager : MonoBehaviour
 
     public void AddPoint()
     {
-        score += 1;
+        score ++;
         scoreText.text = score.ToString() + " POINTS";
 
         if (highscore < score)
