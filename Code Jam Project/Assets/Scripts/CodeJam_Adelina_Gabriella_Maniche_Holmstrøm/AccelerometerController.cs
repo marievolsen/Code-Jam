@@ -12,11 +12,11 @@ public class AccelerometerController : MonoBehaviour
     //Based on https://github.com/Kuurde/Roll-a-Ball / https://learn.unity.com/project/roll-a-ball
 
     [SerializeField] private float speed; // A variable to set the speed of the player
-    private Rigidbody rb; //Setting the component of the gameobjects rigidbody ot a variable in order to manipulate its physics
-    [SerializeField] private int yValue; //A variable that accounts for the three different values Vector 3 needs
+    private Rigidbody rb; // A variable of the Rigidbody type to assign the component Rigidbody
+    [SerializeField] private int yValue; // A variable that accounts for the float y value
     public static Vector3 spawnposition; // A static Vector3 that sets the spawnposition of the player
-    [SerializeField] private Vector3 startPosition; // A Vector3 variable that set the start position of the 
-    public static int checkpointCount; // a statifc counter for the checkpoints
+    [SerializeField] private Vector3 startPosition; // A Vector3 variable that set the start position of the player 
+    public static int checkpointCount; // a static counter for the checkpoints
     public static int collectibleCount; // a static counter for the collectibles 
 
 
@@ -37,20 +37,20 @@ public class AccelerometerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float moveHorizontal = Input.acceleration.x; // set the acceleration input from the x axis to a float called moveHorizontal
-        float moveVertical = Input.acceleration.y; // set the acceleration input from the y axis to a float called moveVertical
+        float moveHorizontal = Input.acceleration.x; // set the acceleration input from the x-axis to a float called moveHorizontal
+        float moveVertical = Input.acceleration.y; // set the acceleration input from the y-axis to a float called moveVertical
 
 
-        Vector3 movement = new Vector3(moveHorizontal, yValue, moveVertical); // Assign a Vector3 called movement to the float variable of
-                                                                              // the three float vairbales of the axis x, y, and z.
+        Vector3 movement = new Vector3(moveHorizontal, yValue, moveVertical); // Assigns a Vector3 called movement to the float variable of
+                                                                              // the acceleration input of x, y, and z.
 
-        movement.Normalize(); // Nomralizes the new Vector3 to have a magnitude of 1
+        movement.Normalize(); // Normalizes the new Vector3 to have a magnitude of 1
 
         rb.AddForce(movement * speed); //Adds the input of the movement vector as a force
-                                       //times the set speed to the rigidbody of the gameobject
+                                       //times speed to the Rigidbody of the GameObject
     }
 
-    // a method that sets the spawn position using a Vector3 parameter to acces the position transform of the gameobject
+    // A method that sets the spawnposition using a Vector3 parameter to access the position transform of the GameObject
     public void SetSpawnPosition(Vector3 position)
     {
         spawnposition = position;
@@ -58,7 +58,7 @@ public class AccelerometerController : MonoBehaviour
 
     private void Update()
     {
-        //this if statement checks and makes sure the the orientation of the phone is set to landscapemode,
+        //This if statement checks and makes sure the the orientation of the phone is set to landscapemode,
         //in order to move the player along the axis in the correct way.
         if(Input.deviceOrientation == DeviceOrientation.LandscapeLeft)
         {
