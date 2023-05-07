@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class CollectibleControls : MonoBehaviour
 {
-    //Based on "BoxScript" and "Respawn", made by Victor Hejø during HTX at ZBC Ringsted.
+    //Based on "CollectibleScript" and "Respawn", made by Victor Hejø during HTX at ZBC Ringsted.
     [SerializeField] private GameObject player;
     [SerializeField] private int nextLevelIndex;
     public AudioClip _clip;
+
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
 
     public void OnTriggerEnter(Collider other)
     {

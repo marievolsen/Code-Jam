@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AccelerometerController : MonoBehaviour
 {
-    //Based on "BoxScript" and "Respawn", made by Victor Hejø during HTX at ZBC Ringsted.
+    //Based on "CollectibleScript" and "Respawn", made by Victor Hejø during HTX at ZBC Ringsted.
     //Based on the comment section of https://www.youtube.com/watch?v=fsEkZLBeTJ8
 
     [SerializeField] private float speed;
