@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AccelerometerController : MonoBehaviour
@@ -10,19 +11,35 @@ public class AccelerometerController : MonoBehaviour
     [SerializeField] private float speed;
     private Rigidbody rb;
     [SerializeField] private int yValue;
-    public static Vector3 spawnposition;
+    public static Vector3 spawnPosition;
     [SerializeField] private Vector3 startPosition;
-    public bool checkpoint;
+    public static bool checkpoint;
     public static int collectibleCount;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        if (checkpoint)
+        if (!checkpoint)
         {
-            spawnposition = startPosition;
+            spawnPosition = startPosition;
         }
-        transform.position = spawnposition;
+        //Commented out as it does not function properly at the moment.
+        /*else
+        {
+            if (PlayerPrefs.HasKey("SpawnPositionXYZ"))
+            {
+                string input = PlayerPrefs.GetString("SpawnPositionXYZ");
+                Debug.Log("GetString: " + input);
+                string[] coordinates = input.Split(";");
+                foreach (string s in coordinates) { Debug.Log(s); }
+                float.TryParse(coordinates[0], out spawnPosition.x);
+                float.TryParse(coordinates[1], out spawnPosition.y);
+                float.TryParse(coordinates[2], out spawnPosition.z);
+                Debug.Log(spawnPosition);
+            }
+        }*/
+        transform.position = spawnPosition;
+        Debug.Log(spawnPosition);
     }
 
     void FixedUpdate()
@@ -31,8 +48,18 @@ public class AccelerometerController : MonoBehaviour
         rb.AddForce(acc.x * speed, yValue, acc.y * speed);
     }
 
-    public void SetSpawnPosition(Vector3 position)
+    public static void SetSpawnPosition(Vector3 position)
     {
-        spawnposition = position;
+        spawnPosition = position;
+
+        //Commented out as it does not function properly at the moment.
+        /*PlayerPrefs.SetString("SpawnPositionXYZ", $"{spawnPosition.x};{spawnPosition.y};{spawnPosition.z}");
+        Debug.Log(PlayerPrefs.GetString("SpawnPositionXYZ"));
+        Debug.Log(spawnPosition);*/
+    }
+
+    public Vector3 GetStartPosition()
+    {
+        return startPosition;
     }
 }

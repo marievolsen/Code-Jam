@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectibleManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject[] spawnPoints;
 
-    // Update is called once per frame
-    void Update()
+    public void ResetCollectibles()
     {
-        
+        AccelerometerController ac = GameObject.FindWithTag("Player").GetComponent<AccelerometerController>();
+        AccelerometerController.SetSpawnPosition(ac.GetStartPosition());
+        foreach (GameObject g in spawnPoints)
+        {
+            SpawnPoint sp = g.GetComponent<SpawnPoint>();
+            sp.SetCollection(false);
+        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
