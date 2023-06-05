@@ -19,27 +19,32 @@ public class AccelerometerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        //MODIFICATION (START)
+        if (PlayerPrefs.HasKey("Checkpoint"))
+        {
+            string s = PlayerPrefs.GetString("Checkpoint");
+            if (s == "True")
+            {
+                checkpoint = true;
+            }
+        }
+        //MODIFICATION (END)
         if (!checkpoint)
         {
             spawnPosition = startPosition;
         }
-        //Commented out as it does not function properly at the moment.
-        /*else
+        else
         {
             if (PlayerPrefs.HasKey("SpawnPositionXYZ"))
             {
                 string input = PlayerPrefs.GetString("SpawnPositionXYZ");
-                Debug.Log("GetString: " + input);
                 string[] coordinates = input.Split(";");
-                foreach (string s in coordinates) { Debug.Log(s); }
                 float.TryParse(coordinates[0], out spawnPosition.x);
                 float.TryParse(coordinates[1], out spawnPosition.y);
                 float.TryParse(coordinates[2], out spawnPosition.z);
-                Debug.Log(spawnPosition);
             }
-        }*/
+        }
         transform.position = spawnPosition;
-        Debug.Log(spawnPosition);
     }
 
     void FixedUpdate()
@@ -51,11 +56,7 @@ public class AccelerometerController : MonoBehaviour
     public static void SetSpawnPosition(Vector3 position)
     {
         spawnPosition = position;
-
-        //Commented out as it does not function properly at the moment.
-        /*PlayerPrefs.SetString("SpawnPositionXYZ", $"{spawnPosition.x};{spawnPosition.y};{spawnPosition.z}");
-        Debug.Log(PlayerPrefs.GetString("SpawnPositionXYZ"));
-        Debug.Log(spawnPosition);*/
+        PlayerPrefs.SetString("SpawnPositionXYZ", $"{spawnPosition.x};{spawnPosition.y};{spawnPosition.z}");
     }
 
     public Vector3 GetStartPosition()

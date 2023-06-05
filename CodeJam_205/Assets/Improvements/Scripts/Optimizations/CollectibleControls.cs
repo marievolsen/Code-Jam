@@ -26,6 +26,9 @@ public class CollectibleControls : MonoBehaviour
             AccelerometerController.SetSpawnPosition(transform.position);
             Destroy(gameObject);
             AccelerometerController.checkpoint = true;
+            //MODIFICATION (START)
+            PlayerPrefs.SetString("Checkpoint", $"{AccelerometerController.checkpoint}");
+            //MODIFICATION (END)
             sp = GameObject.Find($"SpawnPoint{index}").GetComponent<SpawnPoint>(); 
             sp.SetCollection(true);
         }
