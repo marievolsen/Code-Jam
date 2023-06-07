@@ -23,6 +23,30 @@ public class SoundManager : MonoBehaviour
 
         if (!_musicSource) _musicSource = GetComponent<AudioSource>();
 
+        if (PlayerPrefs.HasKey("MusicMuted"))
+        {
+            if (PlayerPrefs.GetString("MusicMuted") == "True")
+            {
+                _musicSource.mute = true;
+            }
+            else
+            {
+                _musicSource.mute = false;
+            }
+        }
+        
+        if (PlayerPrefs.HasKey("EffectsMuted"))
+        {
+            if (PlayerPrefs.GetString("EffectsMuted") == "True")
+            {
+                _effectsSource.mute = true;
+            }
+            else
+            {
+                _effectsSource.mute = false;
+            }
+        }
+
         PlayClip(_musicSource.clip);
 
     }
@@ -47,12 +71,14 @@ public class SoundManager : MonoBehaviour
     public void ToggleEffects()
     {
         _effectsSource.mute = !_effectsSource.mute;
+        PlayerPrefs.SetString("EffectsMuted", $"{_effectsSource.mute}");
     }
 
     public void ToggleMusic()
     {
         _musicSource.mute = !_musicSource.mute;
+        PlayerPrefs.SetString("MusicMuted", $"{_musicSource.mute}");
     }
 
-    
+
 }
